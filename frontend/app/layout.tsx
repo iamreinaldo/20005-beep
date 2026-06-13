@@ -30,15 +30,25 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100">
         <nav className="border-b border-zinc-800 bg-zinc-900">
-          <div className="mx-auto flex max-w-7xl items-center gap-6 px-6 py-4">
-            <Link href="/" className="font-bold">
+          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-6">
+            <Link href="/" className="text-lg font-bold">
               🛰️ 20-005 Beep
             </Link>
 
-            <Link href="/">Dashboard</Link>
-            <Link href="/services">Serviços</Link>
-            <Link href="/categories">Categorias</Link>
-            <Link href="/admin">Admin</Link>
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-zinc-300 sm:justify-start">
+              <Link href="/" className="hover:text-zinc-100">
+                Dashboard
+              </Link>
+              <Link href="/services" className="hover:text-zinc-100">
+                Serviços
+              </Link>
+              <Link href="/categories" className="hover:text-zinc-100">
+                Categorias
+              </Link>
+              <Link href="/admin" className="hover:text-zinc-100">
+                Admin
+              </Link>
+            </div>
           </div>
         </nav>
 
