@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 async function getServices() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services/`);
+  const response = await fetch("/api/services/");
   return response.ok ? response.json() : [];
 }
 
 async function getCategories() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+  const response = await fetch("/api/categories/");
   return response.ok ? response.json() : [];
 }
 

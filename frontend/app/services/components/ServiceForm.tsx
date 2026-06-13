@@ -5,12 +5,12 @@
 import { useEffect, useState } from "react";
 
 async function getCategories() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+  const response = await fetch("/api/categories/");
   return response.ok ? response.json() : [];
 }
 
 async function createService(payload: any) {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services/`, {
+  const response = await fetch("/api/services/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -1,23 +1,21 @@
-
-
 "use client";
 
 import { useEffect, useState } from "react";
 import ServiceForm from "./components/ServiceForm";
 
 async function getServices() {
-  const response = await fetch("http://localhost:8000/services/");
+  const response = await fetch("/api/services/");
   return response.ok ? response.json() : [];
 }
 
 async function deleteService(id: number) {
-  await fetch(`http://localhost:8000/services/${id}`, {
+  await fetch(`/api/services/${id}`, {
     method: "DELETE",
   });
 }
 
 async function updateService(id: number, payload: any) {
-  await fetch(`http://localhost:8000/services/${id}`, {
+  await fetch(`/api/services/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

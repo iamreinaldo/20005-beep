@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 async function getServices() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services/`);
+    const response = await fetch("/api/services/");
 
     if (!response.ok) {
       return [];
@@ -17,7 +17,7 @@ async function getServices() {
 
 async function getCategories() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+    const response = await fetch("/api/categories/");
 
     if (!response.ok) {
       return [];

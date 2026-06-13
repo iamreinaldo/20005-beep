@@ -4,18 +4,18 @@ import { useEffect, useState } from "react";
 import CategoryForm from "./components/CategoryForm";
 
 async function getCategories() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+  const response = await fetch("/api/categories/");
   return response.ok ? response.json() : [];
 }
 
 async function deleteCategory(id: number) {
-  return fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/${id}`, {
+  return fetch(`/api/categories/${id}`, {
     method: "DELETE",
   });
 }
 
 async function updateCategory(id: number, payload: any) {
-  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/${id}`, {
+  await fetch(`/api/categories/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
