@@ -4,8 +4,17 @@ from sqlalchemy import text
 from app.database.database import SessionLocal
 from app.api.services import router as services_router
 from app.api.category import router as category_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="20-005 Beep")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/health")
