@@ -14,74 +14,85 @@ Assim como o Sputnik emitia sinais para informar sua presença e estado em órbi
 
 ---
 
-## Objetivo
+## Visão Geral
 
-O principal objetivo do projeto é eliminar a necessidade de memorizar URLs, portas, domínios e informações dispersas dos serviços hospedados.
+20-005 Beep é uma plataforma open source para centralização e gerenciamento de serviços self-hosted.
 
-O sistema atuará como um ponto central de acesso, oferecendo:
+O objetivo do projeto é fornecer uma interface simples e extensível para descoberta, organização e acesso a aplicações hospedadas em ambientes pessoais, domésticos, laboratoriais e pequenas infraestruturas.
 
-- Catálogo de serviços disponíveis
-- Organização por categorias
-- Informações de status e disponibilidade
-- Acesso rápido através de links centralizados
-- Futuras funcionalidades de monitoramento e telemetria
+O projeto busca ser uma alternativa leve, moderna e totalmente aberta para usuários que desejam administrar seus próprios serviços.
 
 ---
 
-## Arquitetura
+## Funcionalidades
 
-O projeto será dividido em duas aplicações principais.
+- Catálogo de serviços
+- Organização por categorias
+- Pesquisa rápida
+- Dashboard centralizado
+- Interface responsiva
+- API para integração com outras ferramentas
+- Monitoramento e telemetria (em desenvolvimento)
+
+---
+
+## Stack Tecnológica
 
 ### Frontend
 
-Responsável pela interface do usuário.
-
-Tecnologias
-
 - Next.js
 - TypeScript
-- TailwindCSS
-- Shadcn/UI
-
-Funcionalidades previstas:
-
-- Dashboard principal
-- Pesquisa de serviços
-- Agrupamento por categorias
-- Visualização de status
-- Interface responsiva
-
----
+- Tailwind CSS
+- shadcn/ui
 
 ### Backend
-
-Responsável pelo gerenciamento e monitoramento dos serviços cadastrados.
-
-Tecnologias
 
 - FastAPI
 - SQLAlchemy
 - Pydantic
 - PostgreSQL
 
-Funcionalidades previstas:
-
-- Cadastro de serviços
-- Atualização e remoção de serviços
-- Verificação de disponibilidade
-- APIs para consumo do frontend
-- Coleta de métricas e telemetria
-
----
-
-## Deploy
-
-Toda a infraestrutura será distribuída através de containers.
-
-Tecnologias
+### Infraestrutura
 
 - Docker
 - Docker Compose
 
+---
+
+## Instalação
+
+Em breve.
 
 ---
+
+## Roadmap
+
+- [ ] Monitoramento de disponibilidade dos serviços
+- [ ] Dashboard com métricas em tempo real
+- [ ] Sistema de autenticação e permissões
+- [ ] Integração com WireGuard
+- [ ] Integração com Prometheus
+- [ ] Integração com Grafana
+- [ ] Aplicativo mobile
+
+---
+
+## Contribuindo
+
+Contribuições são bem-vindas.
+
+Antes de abrir uma Pull Request, leia o arquivo `CONTRIBUTING.md`.
+
+Você pode contribuir com:
+
+- Correções de bugs
+- Melhorias de documentação
+- Novas funcionalidades
+- Revisões de código
+- Testes
+
+---
+
+## Licença
+
+Este projeto é distribuído sob a licença GNU AGPL v3. Consulte o arquivo `LICENSE` para mais informações.
